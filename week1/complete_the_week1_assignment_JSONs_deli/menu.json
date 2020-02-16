@@ -1,0 +1,29 @@
+{
+
+    "menu": [{
+            "appetizents": ["large russet potatoes, Butter, sour cream, freshly chopped chives, green onions, thinly sliced, white and green parts divided, shredded Cheddar, slices crispy bacon, Freshly ground black pepper."],
+            "descriper": "Potato Wedges",
+            "ingredition": "These are baked fully and all topings are prepared fresh daily."
+        },
+        {
+            "cold sandwiches": "Cold Cut Compo",
+            "ingredients": ["This sandwiche is prepared with a combination of three deli meats: ham, salami, and bologna plus your choice of cheese, veggies, condiments, and bread"],
+            "description": "Fresh bread, your choice of tree deli meats, fresh veggies, and cheese."
+        },
+        {
+            "hot sandwitches": "Stake Sandwiches",
+            "ingredients": ["skirt steak, extra-virgin olive, oil, Kosher salt, Freshly ground black pepper"],
+            "description": "Lightly butter rolls toast in a toaster oven until golden place skirt steak n the bottom half of each roll and place 2 slices provolone on top Put back in toaster oven to melt cheese. Remove from oven and top with arugula and peppers Generously spread aioli on top half of rolls before topping the finished sandwiches."
+        },
+        {
+            "desserts": "Deep Dish Apple Pie Recipe",
+            "ingredients": ["Apples- recommend using half tart and half sweet. Spices like cinnamon and nutmeg. Add ground cloves and allspice to the filling for a little something extra. Lemon – A touch of lemon is crucial in apple pies. Not enough to taste the lemon, but just enough to prevent the apples from browning and to keep the flavor bright. Sugar – Sugar sweetens the pie filling. Flour – Flour thickens the pie filling."],
+            "description": "Deep dish apple pie features layers and layers of delicious apple slices and a buttery flaky pie crust! "
+        },
+        {
+            "drinks": "Soda",
+            "ingredients": ["Ingredient Checklist 2 cups cane ugar, preferably organic Juice of 1 lemon 1 vanilla bean, split and seeded Ice cubes, for serving Seltzer water, for serving"],
+            "description": "This blushed drink is refreshment with a cherry on top!"
+        }
+    ]
+}
