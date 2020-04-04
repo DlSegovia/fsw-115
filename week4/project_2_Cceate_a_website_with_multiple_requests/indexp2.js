@@ -1,7 +1,7 @@
-var btn1 = document.getElementById("btn1")
-btn1.addEventListener("click", function() {
+var btn2 = document.getElementById("btn2")
+btn2.addEventListener("click", function() {
 
-    axios.get("https://api.vschool.io/[daniel_segovia]/todo")
+    axios.get("https://api.vschool.io/recipepuppy/todo")
         .then(response => {
             console.log(response)
             for (let i = 0; i < response.data.length; i++) {
@@ -19,6 +19,9 @@ btn1.addEventListener("click", function() {
                 const p = document.createElement('p')
                 p.textContent = response.data[i].completed
                 document.body.append(p);
+                const img = document.createElement('img')
+                img.src = response.data[i].imgUrl
+                document.body.append(img);
                 if (response.data[i].completed) {
                     h1.style.textDecoration = "line-through"
                     h3.style.textDecoration = "line-through"
@@ -28,3 +31,5 @@ btn1.addEventListener("click", function() {
             }
         })
 })
+
+.catch(error => console.log(error))

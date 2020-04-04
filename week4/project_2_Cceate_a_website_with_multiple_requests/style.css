@@ -1,0 +1,29 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: 45%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    padding: 18px;
+    background-color: #dddddd;
+}
+
+#btn1 {
+    margin: 50px 0 0 75px;
+    height: 45px;
+    width: 75px;
+}
+
+#btn2 {
+    margin: 50px 0 0 75px;
+    height: 45px;
+    width: 75px;
+}

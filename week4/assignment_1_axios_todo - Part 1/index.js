@@ -14,9 +14,9 @@ axios.get("https://api.vschool.io/[daniel_segovia]/todo")
                 h1.style.textDecoration = "line-through"
                 h3.style.textDecoration = "line-through"
             }
-            const img = document.createElement('img')
-            img.src = response.data[i].imgUrl
-            div.appendChild(img)
+            // const img = document.createElement('img')
+            // img.src = response.data[i].imgUrl
+            // div.appendChild(img)
         }
     })
     .catch(error => console.log(error))
