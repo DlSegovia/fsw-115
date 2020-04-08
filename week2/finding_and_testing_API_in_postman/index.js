@@ -1,10 +1,5 @@
-//const h1 = document.getElementsByTagName('h1')[0];
-//h1.innerHTML = 'Hello, World!';
-
-//const p = document.getElementsByTagName('p')[0];
-// p.innerHTML = "resultes"
 var newp = {
-    "response_code": 0,
+
     "ressults": [{
         'name': 'Chewbacca',
         'height': '228',
