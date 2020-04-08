@@ -1,5 +1,5 @@
 function loadXML() {
-    
+
     const xhr = new XMLHttpRequest();
     xhr.open("GET", "https://api.vschool.io/pokemon", true);
     xhr.send();
@@ -15,7 +15,7 @@ function loadXML() {
     function showData(arr) {
         for (let i = 0; i < arr.length; i++) {
             const h1 = document.createElement('h1')
-            h1.innerHTML = "name: " + arr[i].name + "</br> resource_uri: " + arr[i].resource_uri
+            h1.innerHTML = "Name: " + arr[i].name + "</br> Resource_uri: " + arr[i].resource_uri
             document.body.append(h1)
         }
     }
