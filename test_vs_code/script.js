@@ -18,13 +18,9 @@ async function getData() {
 getData()
 
 function listHomeWorldToDOM(homeworld, luke) {
-    const ul = document.createElement('ul');
-    ul.setAttribute('id', 'myList');
-
-    var li = document.createElement('li');
-    li.setAttribute('class', 'name');
+    const li = document.createElement('li');
     li.textContent = "Name: " + luke.data.name
-    ul.appendChild(li);
+    document.body.appendChild(li);
 
     const homeworldli = document.createElement('li');
     homeworldli.textContent = "Homeworld: " + homeworld.data.name
