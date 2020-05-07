@@ -1,0 +1,49 @@
+/* size for mobile large 425px */
+
+body {
+    background-image: url("images/federico-beccari-L8126OwlroY-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1,
+h2,
+h3 {
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+
+/* size for tablet 768px */
+
+@media only screen and (min-width: 768px) {
+    h1 {
+        margin-top: 0px;
+    }
+}
+
+
+/* size for laptop 1024px */
+
+@media only screen and (min-width: 1024px) {
+    h1 {
+        margin-top: 5px;
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 30px;
+        margin-top: 5px;
+    }
+}

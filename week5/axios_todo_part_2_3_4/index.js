@@ -13,8 +13,6 @@ axios.get("https://api.vschool.io/daniel_segovia/todo")
             li.textContent = response.data[i].title;
             div.appendChild(li);
 
-            // console.log(response.data[i].description)
-
             newLi = document.createElement('li');
             newLi.textContent = response.data[i].description;
             div.appendChild(newLi);
@@ -88,7 +86,6 @@ function newElement() {
                 const li = document.createElement('li');
                 li.textContent = inputTitle;
                 div.appendChild(li);
-                // console.log(response.data[i].description)
 
                 newLi = document.createElement('li');
                 newLi.textContent = inputDescription;

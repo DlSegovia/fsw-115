@@ -159,22 +159,3 @@ input {
 .addBtn:hover {
     background-color: #bbb;
 }
-
-
-/* Style the "Clear-List" button */
-
-#clear-list {
-    width: 30%;
-    font-weight: bold;
-    font-style: italic;
-    font-size: xx-large;
-    font-family: "Times New Roman";
-    margin: 40px 35%;
-    background-color: darkblue;
-    color: white;
-}
-
-#clear-list:hover {
-    background-color: blue;
-    color: white;
-}
