@@ -2,12 +2,12 @@ async function getData() {
 
     try {
         const response = await axios.get("https://swapi.dev/api/people/1/")
-        const homeworld = await axios.get(response.data.homeworld)
-        listHomeWorldToDOM(homeworld, response)
+        const homeworld = await axios.get(response.data.homeworld);
+        listHomeWorldToDOM(homeworld, response);
 
         for (var i = 0; i < 4; i++) {
-            const film = await axios.get(response.data.films[i])
-            listFilmToDOM(film)
+            const film = await axios.get(response.data.films[i]);
+            listFilmToDOM(film);
         }
 
     } catch (error) {
@@ -18,25 +18,30 @@ async function getData() {
 getData()
 
 function listHomeWorldToDOM(homeworld, luke) {
-    const nameh1 = document.createElement('h1')
-    nameh1.textContent = "Name: " + luke.data.name
-    document.body.appendChild(nameh1)
+    const li = document.createElement('li');
+    li.setAttribute('id', 'name');
+    li.textContent = "Name: " + luke.data.name
+    document.getElementById("myList").appendChild(li);
 
-    const newh1 = document.createElement('h1')
-    newh1.textContent = "Homeworld: " + homeworld.data.name
-    document.body.appendChild(newh1)
+    const homeworldli = document.createElement('li');
+    homeworldli.setAttribute('id', 'homeworld');
+    homeworldli.textContent = "Homeworld: " + homeworld.data.name
+    document.getElementById("myList").appendChild(homeworldli);
 
-    const h1 = document.createElement('h1')
-    h1.textContent = "Luke Skywalker's films:"
-    document.body.appendChild(h1)
+    const filmli = document.createElement('li');
+    filmli.setAttribute('id', 'film');
+    filmli.textContent = "Luke Skywalker's films:"
+    document.getElementById("myList").appendChild(filmli);
 }
 
 function listFilmToDOM(film) {
-    const h2 = document.createElement('h2')
-    h2.textContent = "Episode: " + film.data.episode_id
-    document.body.appendChild(h2)
+    const episodeli = document.createElement('li');
+    episodeli.setAttribute('id', 'episode');
+    episodeli.textContent = "Episode: " + film.data.episode_id
+    document.getElementById("myList").appendChild(episodeli);
 
-    const h3 = document.createElement('h3')
-    h3.textContent = film.data.title
-    document.body.appendChild(h3)
+    const titleli = document.createElement('li');
+    titleli.setAttribute('id', 'title');
+    titleli.textContent = "Title " + film.data.title
+    document.getElementById("myList").appendChild(titleli);
 }
