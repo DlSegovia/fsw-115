@@ -9,6 +9,10 @@ axios.get("https://api.vschool.io/daniel_segovia/todo")
             div.id = response.data[i]._id
             div.style.display = "flex"
 
+            const checkbox = document.createElement('ckbox');
+            checkbox.className = "checkbox"
+            div.appendChild(checkbox);
+
             const li = document.createElement('li');
             li.textContent = response.data[i].title;
             div.appendChild(li);
@@ -21,12 +25,21 @@ axios.get("https://api.vschool.io/daniel_segovia/todo")
             priceLi.textContent = "$" + response.data[i].price;
             div.appendChild(priceLi);
 
+            var spanEdit = document.createElement("SPAN");
+            var txt = document.createTextNode("\u00D7");
+            spanEdit.className = "edit";
+            spanEdit.appendChild(txt);
+            li.appendChild(spanEdit);
+            console.log(spanEdit)
+            spanEdit.id = response.data[i]._id
+
             var span = document.createElement("SPAN");
             var txt = document.createTextNode("\u00D7");
             span.className = "close";
             span.appendChild(txt);
             li.appendChild(span);
             span.id = response.data[i]._id
+
 
             div.addEventListener("click", editFunction)
             span.addEventListener("click", deleteFunction)
@@ -39,16 +52,16 @@ axios.get("https://api.vschool.io/daniel_segovia/todo")
 
 // Add a "checked" symbol when clicking on a list item changes the complete to TRUE
 function editFunction(e) {
-    const id = e.target.id
-    console.log(e.target)
+    const id = e.currentTarget.id
+    console.log(e.currentTarget)
 
-    if (e.target.tagName === 'DIV') {
-        e.target.classList.toggle('checked');
+    if (e.currentTarget.tagName === 'DIV') {
+        e.currentTarget.classList.toggle('checked');
     }
 
-    if (e.target.tagName != "SPAN") {
-        axios.put("https://api.vschool.io/daniel_segovia/todo/" + e.target.id, {
-                completed: (e.target.classList == "checked" ? true : false)
+    if (e.currentTarget.tagName != "SPAN") {
+        axios.put("https://api.vschool.io/daniel_segovia/todo/" + e.currentTarget.id, {
+                completed: (e.currentTarget.classList == "checked" ? true : false)
             })
             .then(response => {
 
@@ -83,6 +96,11 @@ function newElement() {
                 const div = document.createElement('div');
                 div.style.display = "flex"
                 document.getElementById("myList").appendChild(div);
+
+                const checkbox = document.createElement('ckbox');
+                checkbox.className = "checkbox"
+                div.appendChild(checkbox);
+
                 const li = document.createElement('li');
                 li.textContent = inputTitle;
                 div.appendChild(li);
@@ -103,6 +121,8 @@ function newElement() {
                 document.getElementsByTagName("input")[1].value = "";
                 document.getElementsByTagName("input")[2].value = "";
 
+
+
                 var span = document.createElement("SPAN");
                 var txt = document.createTextNode("\u00D7");
                 span.className = "close";
@@ -111,12 +131,16 @@ function newElement() {
 
                 span.id = response.data._id
 
+
+
+
                 div.addEventListener("click", editFunction)
                 span.addEventListener("click", deleteFunction)
             })
-    }
-}
 
+    }
+    console.log("hello world")
+}
 // This is the delete function
 function deleteFunction(e) {
     const deleteLi = document.getElementById(e.target.id)
@@ -149,3 +173,4 @@ for (i = 0; i < close.length; i++) {
         div.style.display = "none";
     }
 }
+// <i class="fas fa-trash-alt"></i>
